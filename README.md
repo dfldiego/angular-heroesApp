@@ -1,3 +1,8 @@
+## Installed Dependencies
+
+npm i bootstrap --save
+npm i jquery popper.js --save
+
 # AngularExam
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.4.
