@@ -5,10 +5,10 @@ import { ListaHeroesComponent } from './components/lista-heroes/lista-heroes.com
 import { DetalleHeroeComponent } from './components/detalle-heroe/detalle-heroe.component';
 
 const routes: Routes = [
-  { path: '/', component: ListaHeroesComponent },
-  { path: '/marvel', component: ListaHeroesComponent },
-  { path: '/dc', component: ListaHeroesComponent },
-  { path: '/detalle-heroe/:id', component: DetalleHeroeComponent },
+  { path: 'lista-heroes', component: ListaHeroesComponent },
+  { path: 'lista-heroes', component: ListaHeroesComponent },
+  { path: 'lista-heroes', component: ListaHeroesComponent },
+  { path: 'detalle-heroe/:id', component: DetalleHeroeComponent },
   { path: '**', pathMatch: 'full', redirectTo: '/' }
 ];
 
