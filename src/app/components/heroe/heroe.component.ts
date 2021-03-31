@@ -8,6 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class HeroeComponent implements OnInit {
 
   @Input() heroe: any = {};
+  @Input() index: number;
 
   constructor() { }
 
