@@ -1,1 +1,23 @@
-<p>detalle-heroe works!</p>
+<div class="row mt-5">
+
+  <div class="col text-center">
+    <img src="assets/img/{{heroe.img}}" [alt]="heroe.nombre" class="img-thumbnail" />
+  </div>
+
+  <div class="col">
+    <h3>{{heroe.nombre}}</h3>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"> <b>Biografía:</b> {{heroe.bio}} </li>
+      <li class="list-group-item"> <b>Aparición:</b> {{heroe.aparicion}} </li>
+      <li class="list-group-item"> <b>Casa:</b> {{heroe.casa}} </li>
+    </ul>
+
+    <h4><b>Poderes:</b></h4>
+    <ul class="list-group list-group-flush" *ngFor="let poder of heroe.poderes">
+      <li class="list-group-item"> {{poder}} </li>
+    </ul>
+  </div>
+</div>
+<a [routerLink]="['lista-heroes']" class="btn btn-outline-info" onClick={handleReturn}>
+  Retornar
+</a>
