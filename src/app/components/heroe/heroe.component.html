@@ -1,1 +1,25 @@
-<p>heroe works!</p>
+<div class="tarjeta__heroe">
+  <div class="row">
+    <div class="col text-center text-success">{{heroe.nombre}}</div>
+    <div class="col text-danger">Poderes</div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <img src="assets/img/{{heroe.img}}" [alt]="heroe.nombre" />
+    </div>
+    <div class="col col__poderes">
+      <ul *ngFor="let poder of heroe.poderes">
+        <li>{{poder}}</li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col">
+      <button class="text-uppercase text-decoration-none text-dark p-2 bg-aqua">
+        Ver Más
+      </button>
+    </div>
+    <div class="col">
+    </div>
+  </div>
+</div>
