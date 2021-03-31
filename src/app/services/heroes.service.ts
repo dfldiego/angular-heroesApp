@@ -17,4 +17,8 @@ export class HeroesService {
     return this.heroes;
   }
 
+  getHeroeById(idx: string): Heroe {
+    return this.heroes[idx];
+  }
+
 }
