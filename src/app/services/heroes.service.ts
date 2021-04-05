@@ -18,7 +18,11 @@ export class HeroesService {
   }
 
   getHeroeById(idx: string): Heroe {
-    return this.heroes[idx];
+    return this.heroes[String(Number(idx) - 1)];
+  }
+
+  getHeroesByCasa(casa: string): Heroe[] {
+    return this.heroes.filter(heroe => heroe.casa === casa);
   }
 
 }

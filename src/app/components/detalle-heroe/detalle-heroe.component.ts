@@ -17,10 +17,8 @@ export class DetalleHeroeComponent implements OnInit {
     private _heroesService: HeroesService
   ) {
     this.activatedRoute.params.subscribe(params => {
-      this.heroe = _heroesService.getHeroeById(params['id']);
-      console.log("this.heroe", this.heroe);
+      this.heroe = this._heroesService.getHeroeById( params['id']  );
     });
-
   }
 
   ngOnInit(): void {

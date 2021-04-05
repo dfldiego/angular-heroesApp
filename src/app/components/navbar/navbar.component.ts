@@ -7,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class NavbarComponent implements OnInit {
 
+  tipoHeroes: string = "";
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  getTipoHeroe(casa: string){
+    this.tipoHeroes = casa;
   }
 
 }
