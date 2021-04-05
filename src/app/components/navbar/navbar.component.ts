@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-navbar',
@@ -9,7 +10,9 @@ export class NavbarComponent implements OnInit {
 
   tipoHeroes: string = "";
 
-  constructor() { }
+  constructor(
+    private _router: Router
+  ) { }
 
   ngOnInit(): void {
   }
@@ -18,4 +21,8 @@ export class NavbarComponent implements OnInit {
     this.tipoHeroes = casa;
   }
 
+  buscarHeroe(termino: string) {
+    console.log("termino:", termino);
+    this._router.navigate(['/buscar',termino]);
+  }
 }

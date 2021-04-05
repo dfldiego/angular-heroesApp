@@ -21,9 +21,11 @@ export class ListaHeroesComponent implements OnInit {
         this.heroesComponent = this._heroesService.getHeroesByCasa("DC");
       } else if (param['tipo-heroes'] === 'marvel') {
         this.heroesComponent = this._heroesService.getHeroesByCasa("Marvel");
+      }else if(param['termino']){
+        console.log("param['termino']", param['termino']);
+        this.heroesComponent = this._heroesService.getHeroesBySearch(param['termino']);
       }else{
         this.heroesComponent = this._heroesService.getHeroes();
-        console.log(this.heroesComponent);
       }
     })
   }

@@ -22,8 +22,19 @@
     </ul>
 
     <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+      <input 
+        class="form-control mr-sm-2" 
+        type="search" 
+        placeholder="Buscar" 
+        aria-label="Search" 
+        #textoInputBuscar
+        (keyup.enter)="buscarHeroe(textoInputBuscar.value)"
+      >
+      <button 
+        class="btn btn-outline-success my-2 my-sm-0" 
+        type="button"
+        (click)="buscarHeroe(textoInputBuscar.value)"
+      >Buscar</button>
     </form>
 
   </div>
